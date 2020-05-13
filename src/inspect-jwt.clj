@@ -18,7 +18,7 @@
             "Must have only 1 argument of a syntactically correct JWT token")
     (let [[header payload]
           (map base64->string (take 2 (str/split jwt #"\.")))]
-      (printf "Header: %s\nPayload: %s\n" header payload))))
+      (printf "\nHeader: %s\nPayload: %s\n" header payload))))
 
 (try
   (apply -main *command-line-args*)
